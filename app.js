@@ -19,4 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('dailyTip').textContent = selectedTip;
       })
       .catch(error => console.error('Error fetching tips:', error));
+
+      const card = document.querySelector(div);
+      const poss = card.style.zIndex;
+      card.addEventListener('click', () => {
+        let flag = false;
+        if (screen.width <= 800) {
+          if (!flag) {
+            div.style.zIndex = '10';
+          } else {
+            div.style.zIndex = poss;
+          }
+          flag = !flag;
+        }
+      })
   });
