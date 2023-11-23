@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(error => console.error('Error fetching tips:', error));
 
-      const card = document.querySelector(div);
+      const card = document.querySelector('div');
       const poss = card.style.zIndex;
       card.addEventListener('click', () => {
         let flag = false;
